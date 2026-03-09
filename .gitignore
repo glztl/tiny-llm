@@ -1,0 +1,25 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+uv.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data & Models (防止上传大文件)
+*.pth
+*.bin
+*.ckpt
+input.txt
+
+# OS
+.DS_Store
+Thumbs.db
