@@ -2,16 +2,20 @@ import torch
 import requests
 import os
 
+# 从 config 导入配置 (统一配置管理)
+from config import block_size, batch_size, train_split, device
+
 """
     1. 超参数配置
 
     Q: 为什么要把超参数单独管理
     A: 方便实验追踪，避免硬编码，便于调整模型大小和训练细节
 """
-block_size = 256  # 模型一次能看到的最大上下文长度 (Context Window)
-batch_size = 64  # 每次梯度更新使用的样本数
-train_split = 0.9  # 训练集占比
-device = "cuda" if torch.cuda.is_available() else "cpu"
+block_size = block_size  # 模型一次能看到的最大上下文长度 (Context Window)
+batch_size = batch_size  # 每次梯度更新使用的样本数
+train_split = train_split  # 训练集占比
+device = device
+
 
 """
     2. 数据下载与准备
