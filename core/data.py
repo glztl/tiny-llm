@@ -209,7 +209,7 @@ class TextDataset:
             
         print(f"Dataset [{split}] size: {len(self.data)} tokens")
 
-    def get_batch(self, batch_size):
+    def get_batch(self, batch_size) -> tuple[torch.Tensor, torch.Tensor]:
         """
         随机采样一个 batch 的数据
 
