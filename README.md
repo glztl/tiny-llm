@@ -1,6 +1,8 @@
 # ✌️ Tiny LLM
 
-从零手写实现一个迷你大语言模型，用于学习 Transformer 架构与 PyTorch 底层原理。
+从零手写实现一个迷你大语言模型，用于学习 Transformer 原理与 PyTorch 框架。
+
+每段代码都有详细的解读，包含从输入到输出的矩阵变换示例，以及涉及到的相关 Q & A。
 
 > **项目目标**：通过从零实现一个完整的 LLM，深入理解大模型的底层原理，为面试和实际工作打下坚实基础。
 
@@ -59,7 +61,7 @@
 
 ```bash
 # 克隆项目
-git clone https://github.com/你的用户名/tiny-llm.git
+git clone https://github.com/glztl/tiny-llm.git
 cd tiny-llm
 
 # 安装依赖 (使用 UV)
