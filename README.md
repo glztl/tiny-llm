@@ -1,6 +1,7 @@
 # ✌️ Tiny LLM
 
-从零手写实现一个迷你大语言模型，不依赖现成包，深入学习 Transformer 架构与 PyTorch 框架原理。
+从零手写实现一个迷你大语言模型，深入学习 Transformer 架构与 PyTorch 框架原理。
+
 
 每一段代码都配有详细注释与解读，涵盖从输入到输出的矩阵变换示例，并穿插常见 Q&A，帮助你扫清理论与实践障碍。
 
@@ -108,7 +109,7 @@ uv sync
   ```
 
 ### 项目结构
-
+```bash
 tiny_llm/
 ├── .vscode/                 # VS Code 项目配置
 │   ├── settings.json        # 编辑器设置
@@ -126,6 +127,7 @@ tiny_llm/
 ├── README.md                # 项目说明
 ├── pyproject.toml           # 项目依赖配置
 └── uv.lock                  # 依赖锁定文件
+```
 
 ### 生成示例
 - 训练前 (随机权重)
