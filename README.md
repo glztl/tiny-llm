@@ -1,4 +1,4 @@
-# 🦙 Tiny LLM
+# ✌️ Tiny LLM
 
 从零手写实现一个迷你大语言模型，用于学习 Transformer 架构与 PyTorch 底层原理。
 
@@ -68,30 +68,38 @@ uv sync
 ### 模型训练
  开始训练
     uv run python train.py
-
+```
  训练完成后会生成:
  - best_model.pth (最佳验证集模型)
  - final_model.pth (最终模型)
 
 
 ### 推理生成
-# 批量生成示例
+ - 批量生成示例
+   ```bash
     uv run python generate.py best_model.pth
+   ```
 
-# 交互式对话
+ - 交互式对话
+   ```bash
     uv run python generate.py best_model.pth
-# 然后选择模式 2
+   ```
+ - 选择输出模式
 
 ### 自定义配置
-编辑 config.py 调整超参数：
+- 编辑 config.py 调整超参数：
 
-# 增大模型 (需要更多显存)
+- 增大模型 (需要更多显存)
+  ```bash
     n_embd = 256    # 嵌入维度
     n_head = 8      # 注意力头数
     n_layer = 6     # Transformer 层数
-
-    # 增加训练步数
+  ```
+    
+- 增加训练步数
+  ```bash
     max_iters = 10000
+  ```
 
 ### 项目结构
 
@@ -114,25 +122,29 @@ tiny_llm/
 └── uv.lock                  # 依赖锁定文件
 
 ### 生成示例
-训练前 (随机权重)
-输入: Hello
-输出: HellomJrZO,n!URnAYw&sEmK
+- 训练前 (随机权重)
+  ```bash
+   输入: Hello
+   输出: HellomJrZO,n!URnAYw&sEmK
+  ```
 
-训练后 (5000 步)
-输入: ROMEO:
-输出: As look and that the king: that, thou noble country
-      The barned lamster, the crage to of the no hear...
-
-输入: To be or not to be,
-输出: As look shad is not discrent a stongue,
-      And court of that he desire of three,
-      You that God gracesti...
-
-输入: Once upon a time
-输出: is love so did in them,
-      Which would the bend for my eyears.
-      KING RICHARD III:
-      What's how they hear...
+- 训练后 (5000 步)
+  ```bash
+   输入: ROMEO:
+   输出: As look and that the king: that, thou noble country
+         The barned lamster, the crage to of the no hear...
+   
+   输入: To be or not to be,
+   输出: As look shad is not discrent a stongue,
+         And court of that he desire of three,
+         You that God gracesti...
+   
+   输入: Once upon a time
+   输出: is love so did in them,
+         Which would the bend for my eyears.
+         KING RICHARD III:
+         What's how they hear...
+   ```
 
 ### 📈 训练进度
 
@@ -145,31 +157,31 @@ tiny_llm/
 
 
 ### 面试考点
-    本项目涵盖以下面试高频知识点：
-    Transformer 架构
-    自注意力机制 (Self-Attention) 原理与实现
-    多头注意力 (Multi-Head Attention) 的作用
-    因果掩码 (Causal Mask) 的必要性
-    位置编码 (Positional Encoding) 的实现
-    残差连接 (Residual Connection) 的作用
-    层归一化 (LayerNorm) 的位置与作用
-    训练技巧
-    学习率调度 (Warmup + Cosine Decay)
-    梯度裁剪 (Gradient Clipping)
-    AdamW 优化器 vs Adam
-    Dropout 正则化
-    混合精度训练 (AMP)
-    推理优化
-    自回归生成 (Autoregressive Generation)
-    Temperature 采样控制
-    Top-K / Top-P 采样
-    KV Cache 优化 (后续实现)
-    工程实践
-    PyTorch 张量形状变换
-    数据加载与预处理
-    模型保存与加载 (state_dict)
-    Git 版本控制规范
-    项目配置管理
+本项目涵盖以下面试高频知识点：
+- **Transformer 架构**
+  - 自注意力机制 (Self-Attention) 原理与实现
+  - 多头注意力 (Multi-Head Attention) 的作用
+  - 因果掩码 (Causal Mask) 的必要性
+  - 位置编码 (Positional Encoding) 的实现
+  - 残差连接 (Residual Connection) 的作用
+  - 层归一化 (LayerNorm) 的位置与作用
+- **训练技巧**
+  - 学习率调度 (Warmup + Cosine Decay)
+  - 梯度裁剪 (Gradient Clipping)
+  - AdamW 优化器 vs Adam
+  - Dropout 正则化
+  - 混合精度训练 (AMP)
+- **推理优化**
+  - 自回归生成 (Autoregressive Generation)
+  - Temperature 采样控制
+  - Top-K / Top-P 采样
+  - KV Cache 优化 (后续实现)
+- **工程实践**
+  - PyTorch 张量形状变换
+  - 数据加载与预处理
+  - 模型保存与加载 (state_dict)
+  - Git 版本控制规范
+  - 项目配置管理
 
 🔜 后续计划
 
@@ -192,12 +204,11 @@ tiny_llm/
 - [HuggingFace Course - NLP 与大模型课程](https://huggingface.co/learn/nlp-course/)
 
 ### 许可证
-    MIT License
+MIT License
 
-```
 <div align="center">
 
 如果你觉得这个项目有帮助，欢迎点个 ⭐Star 支持！<br/>
-Made with ❤️ by glztl
+Made with ✌ by glztl
 
 </div>
